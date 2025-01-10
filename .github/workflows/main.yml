@@ -16,6 +16,8 @@ jobs:
           api_key: ${{ secrets.SOOS_API_KEY }}
           api_url: "https://qa-api.soos.io/api/"
           project_name: "GHActions-SAST"
-          sast_version: 1.0.2-pre.1
+          sast_version: latest
           log_level: INFO
           verbose: true
+          working_directory: 234
+          source_code_path: 23fd
