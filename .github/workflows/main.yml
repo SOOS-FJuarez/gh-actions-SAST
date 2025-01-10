@@ -17,7 +17,7 @@ jobs:
           api_url: "https://qa-api.soos.io/api/"
           project_name: "GHActions-SAST"
           sast_version: latest
-          log_level: INFO
+          log_level: DEBUG
           verbose: true
           working_directory: 234
           source_code_path: 23fd
