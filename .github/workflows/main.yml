@@ -18,4 +18,4 @@ jobs:
           project_name: "GHActions-SAST"
           sast_version: latest
           log_level: DEBUG
-          project_path: "projectB/sarif-files"
+          path: "projectB/sarif-files"
