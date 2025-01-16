@@ -10,26 +10,26 @@ jobs:
           node-version: 20
       - uses: actions/checkout@master
       - name: Run SOOS SAST Analysis
-        uses: soos-io/soos-sast-github-action@e56d507d2216e2de6b85b97e0cff893e4ca8d0ee #GET Latest Version from https://github.com/marketplace/actions/soos-sast
+        uses: soos-io/soos-sast-github-action@65348f6ff6a3d71239696906796e0c1629293783  #GET Latest Version from https://github.com/marketplace/actions/soos-sast
         with:
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
           api_key: ${{ secrets.SOOS_API_KEY }}
           api_url: https://qa-api.soos.io/api/
           project_name: "GHActions-SAST"
-          sast_version: 1.0.10-pre.1
+          sast_version: 1.0.11-pre.1
           log_level: DEBUG
           source_code_path: "projectB/sarif-files"
-          export_format: test
-          export_file_type: Json
-          output_directory: output
+          export_format: SARIF
+          export_file_type: test
+
 
       # Cargar el directorio generado como artefacto
       - uses: actions/upload-artifact@v4
         with:
           name: sast-analysis-output
           path: |
-              ${{ github.workspace }}/*.cyclonedx.json
-              ${{ github.workspace }}/*.cyclonedx.xml
+              ${{ github.workspace }}/*.cdx.json
+              ${{ github.workspace }}/*.cdx.xml
               ${{ github.workspace }}/*.spdx.json
               ${{ github.workspace }}/*.spdx.txt
               ${{ github.workspace }}/*.sarif.json
