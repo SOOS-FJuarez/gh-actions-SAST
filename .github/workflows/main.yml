@@ -21,7 +21,7 @@ jobs:
           #source_code_path: "projectB/sarif-files"
           export_format: soosissues
           export_file_type: HTML
-          output_directory: output
+          #output_directory: output
 
       # Cargar el directorio generado como artefacto
       - uses: actions/upload-artifact@v4
