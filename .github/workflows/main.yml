@@ -19,9 +19,9 @@ jobs:
           sast_version: 1.0.10-pre.1
           log_level: DEBUG
           source_code_path: "projectB/sarif-files"
-          exportFormat: SARIF
-          exportFileType: Json
-          outputDirectory: output
+          export_tormat: SARIF
+          export_tile_type: Json
+          output_directory: output
 
       # Agregar los pasos para crear y cargar el artefacto
       - run: mkdir -p output
