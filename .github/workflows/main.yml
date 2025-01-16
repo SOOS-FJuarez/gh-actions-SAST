@@ -17,7 +17,7 @@ jobs:
           api_url: https://qa-api.soos.io/api/
           project_name: "GHActions-SAST"
           sast_version: 1.0.11-pre.1
-          log_level: DEBUG
+          #log_level: DEBUG
           #source_code_path: "projectB/sarif-files"
           export_format: SARIF
           export_file_type: JSON
