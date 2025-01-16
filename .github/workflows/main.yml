@@ -20,8 +20,8 @@ jobs:
           log_level: DEBUG
           source_code_path: "projectB/sarif-files"
           export_format: SARIF
-          export_file_type: test
-
+          export_file_type: json
+          output_directory: test
 
       # Cargar el directorio generado como artefacto
       - uses: actions/upload-artifact@v4
