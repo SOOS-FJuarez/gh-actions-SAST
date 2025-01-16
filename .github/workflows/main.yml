@@ -19,7 +19,7 @@ jobs:
           sast_version: 1.0.10-pre.1
           log_level: DEBUG
           source_code_path: "projectB/sarif-files"
-          #export_format: SARIF
+          export_format: test
           export_file_type: Json
           output_directory: output
 
