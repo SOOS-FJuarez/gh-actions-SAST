@@ -10,12 +10,20 @@ jobs:
           node-version: 20
       - uses: actions/checkout@master
       - name: Run SOOS SAST Analysis
-        uses: soos-io/soos-sast-github-action@v1.2.0 #GET Latest Version from https://github.com/marketplace/actions/soos-sast
+        uses: soos-io/soos-sast-github-action@e56d507d2216e2de6b85b97e0cff893e4ca8d0ee #GET Latest Version from https://github.com/marketplace/actions/soos-sast
         with:
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
           api_key: ${{ secrets.SOOS_API_KEY }}
           api_url: https://qa-api.soos.io/api/
           project_name: "GHActions-SAST"
-          sast_version: latest
+          sast_version: 1.0.10-pre.1
           log_level: DEBUG
           source_code_path: "projectB/sarif-files"
+
+      # Agregar los pasos para crear y cargar el artefacto
+      - run: mkdir -p path/to/artifact
+      - run: echo hello > path/to/artifact/world.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: path/to/artifact/world.txt
