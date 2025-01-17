@@ -19,10 +19,9 @@ jobs:
           sast_version: 1.0.11-pre.1
           #log_level: DEBUG
           #source_code_path: "projectB/sarif-files"
-          export_format: SARIF
-          export_file_type: text
+          export_format: cyclonedx
+          export_file_type: json
           output_directory: output
-          output_format: SARIF
 
       # Cargar el directorio generado como artefacto
       - uses: actions/upload-artifact@v4
