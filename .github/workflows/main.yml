@@ -20,7 +20,7 @@ jobs:
           #log_level: DEBUG
           #source_code_path: "projectB/sarif-files"
           export_format: SARIF
-          export_file_type: JSON
+          export_file_type: text
           output_directory: output
           output_format: SARIF
 
